@@ -1,0 +1,14 @@
+﻿CACHE MANIFEST
+#1330386951
+index.html
+c2runtime.js
+jquery-1.7.1.min.js
+logo.png
+images\tiledbackground.png
+images\player-default-000.png
+images\monster-default-000.png
+images\bullet-default-000.png
+images\explosion-default-000.png
+images\flame-default-000.png
+NETWORK:
+*
