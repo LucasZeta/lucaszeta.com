@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Kilometragem durante a semana vs. no longão</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label>Weekday mileage</label>
+            <input type="text" name="km_semana" value="" />
+        </div>
+
+        <div>
+            <label>Long run</label>
+            <input type="text" name="km_longo" value="" />
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var semana = document.getElementsByName('km_semana')[0];
+            var longo = document.getElementsByName('km_longo')[0];
+
+            semana.addEventListener('blur', function () {
+                longo.value = (30 * this.value / 70).toFixed(2);
+            });
+
+            longo.addEventListener('blur', function () {
+                semana.value = (70 * this.value / 30).toFixed(2);
+            });
+        };
+    </script>
+</body>
+</html>
