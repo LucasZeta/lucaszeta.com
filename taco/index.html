@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <base href="/taco/" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="taco">
+    <div ng-controller="AlimentosCtrl">
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Descrição</th>
+                    <th>Umidade</th>
+                    <th>Energia (kcal)</th>
+                    <th>Energia (kJ)</th>
+                    <th>Proteína</th>
+                    <th>Lipídeos</th>
+                    <th>Colesterol</th>
+                    <th>Carboidrato</th>
+                    <th>Fibra Alimentar</th>
+                    <th>Cinzas</th>
+                    <th>Cálcio</th>
+                    <th>Magnésio</th>
+                    <th>Manganês</th>
+                    <th>Fósforo</th>
+                    <th>Ferro</th>
+                    <th>Sódio</th>
+                    <th>Potássio</th>
+                    <th>Cobre</th>
+                    <th>Zinco</th>
+                    <th>Retinol</th>
+                    <th>RE</th>
+                    <th>RAE </th>
+                    <th>Tiamina</th>
+                    <th>Riboflavina</th>
+                    <th>Piridoxina</th>
+                    <th>Niacina</th>
+                    <th>Vitamina C</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="alimento in alimentos">
+                <tr>
+                    <td>{{ alimento.categoria }}</td>
+                    <td>{{ alimento.nome }}</td>
+                    <td>{{ alimento.umidade }}</td>
+                    <td>{{ alimento.energia.kcal }}</td>
+                    <td>{{ alimento.energia.kj }}</td>
+                    <td>{{ alimento.proteina }}</td>
+                    <td>{{ alimento.lipideos }}</td>
+                    <td>{{ alimento.colesterol }}</td>
+                    <td>{{ alimento.carboidrato }}</td>
+                    <td>{{ alimento.fibraAlimentar }}</td>
+                    <td>{{ alimento.cinzas }}</td>
+                    <td>{{ alimento.calcio }}</td>
+                    <td>{{ alimento.magnesio }}</td>
+                    <td>{{ alimento.manganes }}</td>
+                    <td>{{ alimento.fosforo }}</td>
+                    <td>{{ alimento.ferro }}</td>
+                    <td>{{ alimento.sodio }}</td>
+                    <td>{{ alimento.potassio }}</td>
+                    <td>{{ alimento.cobre }}</td>
+                    <td>{{ alimento.zinco }}</td>
+                    <td>{{ alimento.retinol }}</td>
+                    <td>{{ alimento.re }}</td>
+                    <td>{{ alimento.rae }}</td>
+                    <td>{{ alimento.tiamina }}</td>
+                    <td>{{ alimento.riboflavina }}</td>
+                    <td>{{ alimento.piridoxina }}</td>
+                    <td>{{ alimento.niacina }}</td>
+                    <td>{{ alimento.vitaminaC }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
