@@ -2,12 +2,15 @@
 <html>
 <head>
     <base href="/taco/" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </head>
 <body ng-app="taco">
-    <div ng-controller="AlimentosCtrl">
-        <table>
+    <div class="container" ng-controller="AlimentosCtrl">
+        <table class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>Categoria</th>
@@ -40,8 +43,8 @@
                     <th>Vitamina C</th>
                 </tr>
             </thead>
-            <tbody ng-repeat="alimento in alimentos">
-                <tr>
+            <tbody>
+                <tr ng-repeat="alimento in alimentos">
                     <td>{{ alimento.categoria }}</td>
                     <td>{{ alimento.nome }}</td>
                     <td>{{ alimento.umidade }}</td>
