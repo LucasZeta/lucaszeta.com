@@ -26,38 +26,38 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Categoria</th>
-                    <th>Descrição</th>
-                    <th>Carboidrato</th>
-                    <th>Fibra Alimentar</th>
-                    <th>Proteína</th>
-                    <th>Lipídeos</th>
-                    <th>Colesterol</th>
-                    <th>Umidade</th>
-                    <th>Energia (kcal)</th>
-                    <th>Energia (kJ)</th>
-                    <th>Cinzas</th>
-                    <th>Cálcio</th>
-                    <th>Magnésio</th>
-                    <th>Manganês</th>
-                    <th>Fósforo</th>
-                    <th>Ferro</th>
-                    <th>Sódio</th>
-                    <th>Potássio</th>
-                    <th>Cobre</th>
-                    <th>Zinco</th>
-                    <th>Retinol</th>
-                    <th>RE</th>
-                    <th>RAE </th>
-                    <th>Tiamina</th>
-                    <th>Riboflavina</th>
-                    <th>Piridoxina</th>
-                    <th>Niacina</th>
-                    <th>Vitamina C</th>
+                    <th ng-click="sort('categoria')">Categoria</th>
+                    <th ng-click="sort('nome')">Descrição</th>
+                    <th ng-click="sort('carboidrato')">Carboidrato</th>
+                    <th ng-click="sort('fibraAlimentar')">Fibra Alimentar</th>
+                    <th ng-click="sort('proteina')">Proteína</th>
+                    <th ng-click="sort('lipideos')">Lipídeos</th>
+                    <th ng-click="sort('colesterol')">Colesterol</th>
+                    <th ng-click="sort('umidade')">Umidade</th>
+                    <th ng-click="sort('energia.kcal')">Energia (kcal)</th>
+                    <th ng-click="sort('energia.kj')">Energia (kJ)</th>
+                    <th ng-click="sort('cinzas')">Cinzas</th>
+                    <th ng-click="sort('calcio')">Cálcio</th>
+                    <th ng-click="sort('magnesio')">Magnésio</th>
+                    <th ng-click="sort('manganes')">Manganês</th>
+                    <th ng-click="sort('fosforo')">Fósforo</th>
+                    <th ng-click="sort('ferro')">Ferro</th>
+                    <th ng-click="sort('sodio')">Sódio</th>
+                    <th ng-click="sort('potassio')">Potássio</th>
+                    <th ng-click="sort('cobre')">Cobre</th>
+                    <th ng-click="sort('zinco')">Zinco</th>
+                    <th ng-click="sort('retinol')">Retinol</th>
+                    <th ng-click="sort('re')">RE</th>
+                    <th ng-click="sort('rae')">RAE </th>
+                    <th ng-click="sort('tiamina')">Tiamina</th>
+                    <th ng-click="sort('riboflavina')">Riboflavina</th>
+                    <th ng-click="sort('piridoxina')">Piridoxina</th>
+                    <th ng-click="sort('niacina')">Niacina</th>
+                    <th ng-click="sort('vitaminaC')">Vitamina C</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="alimento in alimentos | filter:searchFilter">
+                <tr ng-repeat="alimento in alimentos | orderBy:sortField:sortReverse | filter:searchFilter">
                     <td>{{ alimento.categoria }}</td>
                     <td>{{ alimento.nome }}</td>
                     <td>{{ alimento.carboidrato }}</td>
