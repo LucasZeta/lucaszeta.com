@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+    <base href="/taco/" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="taco">
+    <div class="container" ng-controller="AlimentosCtrl">
+        <form>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-search"></i>
+                    </div>
+
+                    <input type="text" class="form-control" placeholder="Pesquisar alimento" ng-model="searchFilter">
+                </div>      
+            </div>
+        </form>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="#" ng-click="sort('categoria')">
+                            Categoria
+                            <span ng-show="sortField == 'categoria' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'categoria' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('nome')">
+                            Descrição
+                            <span ng-show="sortField == 'nome' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'nome' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('carboidrato')">
+                            Carboidrato
+                            <span ng-show="sortField == 'carboidrato' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'carboidrato' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('fibraAlimentar')">
+                            Fibra Alimentar
+                            <span ng-show="sortField == 'fibraAlimentar' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'fibraAlimentar' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('proteina')">
+                            Proteína
+                            <span ng-show="sortField == 'proteina' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'proteina' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('lipideos')">
+                            Lipídeos
+                            <span ng-show="sortField == 'lipideos' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'lipideos' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('colesterol')">
+                            Colesterol
+                            <span ng-show="sortField == 'colesterol' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'colesterol' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('umidade')">
+                            Umidade
+                            <span ng-show="sortField == 'umidade' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'umidade' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('energia.kcal')">
+                            Energia (kcal)
+                            <span ng-show="sortField == 'energia.kcal' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'energia.kcal' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('energia.kj')">
+                            Energia (kJ)
+                            <span ng-show="sortField == 'energia.kj' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'energia.kj' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('cinzas')">
+                            Cinzas
+                            <span ng-show="sortField == 'cinzas' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'cinzas' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('calcio')">
+                            Cálcio
+                            <span ng-show="sortField == 'calcio' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'calcio' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('magnesio')">
+                            Magnésio
+                            <span ng-show="sortField == 'magnesio' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'magnesio' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('manganes')">
+                            Manganês
+                            <span ng-show="sortField == 'manganes' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'manganes' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('fosforo')">
+                            Fósforo
+                            <span ng-show="sortField == 'fosforo' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'fosforo' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('ferro')">
+                            Ferro
+                            <span ng-show="sortField == 'ferro' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'ferro' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('sodio')">
+                            Sódio
+                            <span ng-show="sortField == 'sodio' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'sodio' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('potassio')">
+                            Potássio
+                            <span ng-show="sortField == 'potassio' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'potassio' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('cobre')">
+                            Cobre
+                            <span ng-show="sortField == 'cobre' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'cobre' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('zinco')">
+                            Zinco
+                            <span ng-show="sortField == 'zinco' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'zinco' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('retinol')">
+                            Retinol
+                            <span ng-show="sortField == 'retinol' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'retinol' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('re')">
+                            RE
+                            <span ng-show="sortField == 're' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 're' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('rae')">
+                            RAE 
+                            <span ng-show="sortField == 'rae' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'rae' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('tiamina')">
+                            Tiamina
+                            <span ng-show="sortField == 'tiamina' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'tiamina' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('riboflavina')">
+                            Riboflavina
+                            <span ng-show="sortField == 'riboflavina' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'riboflavina' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('piridoxina')">
+                            Piridoxina
+                            <span ng-show="sortField == 'piridoxina' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'piridoxina' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('niacina')">
+                            Niacina
+                            <span ng-show="sortField == 'niacina' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'niacina' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sort('vitaminaC')">
+                            Vitamina C
+                            <span ng-show="sortField == 'vitaminaC' && !sortReverse" class="fa fa-caret-up"></span>
+                            <span ng-show="sortField == 'vitaminaC' && sortReverse" class="fa fa-caret-down"></span>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="alimento in alimentos | orderBy:sortField:sortReverse | filter:searchFilter">
+                    <td>{{ alimento.categoria }}</td>
+                    <td>{{ alimento.nome }}</td>
+                    <td>{{ alimento.carboidrato }}</td>
+                    <td>{{ alimento.fibraAlimentar }}</td>
+                    <td>{{ alimento.proteina }}</td>
+                    <td>{{ alimento.lipideos }}</td>
+                    <td>{{ alimento.umidade }}</td>
+                    <td>{{ alimento.energia.kcal }}</td>
+                    <td>{{ alimento.energia.kj }}</td>
+                    <td>{{ alimento.colesterol }}</td>
+                    <td>{{ alimento.cinzas }}</td>
+                    <td>{{ alimento.calcio }}</td>
+                    <td>{{ alimento.magnesio }}</td>
+                    <td>{{ alimento.manganes }}</td>
+                    <td>{{ alimento.fosforo }}</td>
+                    <td>{{ alimento.ferro }}</td>
+                    <td>{{ alimento.sodio }}</td>
+                    <td>{{ alimento.potassio }}</td>
+                    <td>{{ alimento.cobre }}</td>
+                    <td>{{ alimento.zinco }}</td>
+                    <td>{{ alimento.retinol }}</td>
+                    <td>{{ alimento.re }}</td>
+                    <td>{{ alimento.rae }}</td>
+                    <td>{{ alimento.tiamina }}</td>
+                    <td>{{ alimento.riboflavina }}</td>
+                    <td>{{ alimento.piridoxina }}</td>
+                    <td>{{ alimento.niacina }}</td>
+                    <td>{{ alimento.vitaminaC }}</td>
+                </tr>
+            </tbody>
+
+            <caption class="text-left">
+                <ul>
+                    <li><span>NA: não aplicável;</span></li>
+                    <li>
+                        <span>Tr: traço. Adotou-se traço nas seguintes situações:</span>
+                        <ul>
+                            <li><span>valores de nutrientes arredondados para números que caiam entre 0 e 0,5;</span></li>
+                            <li><span>valores de nutrientes arredondados para números com uma casa decimal que caiam entre 0 e 0,05;</span></li>
+                            <li><span>valores de nutrientes arredondados para números com duas casas decimais que caiam entre 0 e 0,005 e;</span></li>
+                            <li><span>valores abaixo dos limites de quantificação (29).</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </caption>
+        </table>
+    </div>
+</body>
+</html>
