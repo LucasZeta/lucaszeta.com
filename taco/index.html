@@ -28,14 +28,14 @@
                 <tr>
                     <th>Categoria</th>
                     <th>Descrição</th>
-                    <th>Umidade</th>
-                    <th>Energia (kcal)</th>
-                    <th>Energia (kJ)</th>
+                    <th>Carboidrato</th>
+                    <th>Fibra Alimentar</th>
                     <th>Proteína</th>
                     <th>Lipídeos</th>
                     <th>Colesterol</th>
-                    <th>Carboidrato</th>
-                    <th>Fibra Alimentar</th>
+                    <th>Umidade</th>
+                    <th>Energia (kcal)</th>
+                    <th>Energia (kJ)</th>
                     <th>Cinzas</th>
                     <th>Cálcio</th>
                     <th>Magnésio</th>
@@ -60,14 +60,14 @@
                 <tr ng-repeat="alimento in alimentos | filter:searchFilter">
                     <td>{{ alimento.categoria }}</td>
                     <td>{{ alimento.nome }}</td>
+                    <td>{{ alimento.carboidrato }}</td>
+                    <td>{{ alimento.fibraAlimentar }}</td>
+                    <td>{{ alimento.proteina }}</td>
+                    <td>{{ alimento.lipideos }}</td>
                     <td>{{ alimento.umidade }}</td>
                     <td>{{ alimento.energia.kcal }}</td>
                     <td>{{ alimento.energia.kj }}</td>
-                    <td>{{ alimento.proteina }}</td>
-                    <td>{{ alimento.lipideos }}</td>
                     <td>{{ alimento.colesterol }}</td>
-                    <td>{{ alimento.carboidrato }}</td>
-                    <td>{{ alimento.fibraAlimentar }}</td>
                     <td>{{ alimento.cinzas }}</td>
                     <td>{{ alimento.calcio }}</td>
                     <td>{{ alimento.magnesio }}</td>
