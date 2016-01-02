@@ -4,12 +4,25 @@
     <base href="/taco/" />
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </head>
 <body ng-app="taco">
     <div class="container" ng-controller="AlimentosCtrl">
+        <form>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-search"></i>
+                    </div>
+
+                    <input type="text" class="form-control" placeholder="Pesquisar alimento" ng-model="searchFilter">
+                </div>      
+            </div>
+        </form>
+
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
@@ -44,7 +57,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="alimento in alimentos">
+                <tr ng-repeat="alimento in alimentos | filter:searchFilter">
                     <td>{{ alimento.categoria }}</td>
                     <td>{{ alimento.nome }}</td>
                     <td>{{ alimento.umidade }}</td>
