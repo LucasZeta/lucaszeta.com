@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>Bike Adventure Program for Awesome Hot Lovely People</title>
+    <title>BAPFAHLP - Bike Adventure Program for Awesome Hot Lovely People</title>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css" />
     <style type="text/css">
@@ -12,6 +12,22 @@
         margin: 8px;
         border: 1px solid black;
         vertical-align: top;
+    }
+
+    .jrpass {
+        color: #337ab7
+    }
+
+    .no-jrpass {
+        color: #00dd77;
+    }
+
+    .bike {
+        color: #ee00bb;
+    }
+
+    .to-be-computed {
+        color: #ababab;
     }
     </style>
 </head>
@@ -28,6 +44,13 @@
                     <li>Não se assuste com o tempo de viagem, você vai fazer metade disso</li>
                     <li>Talvez tenham escadarias ou caminhos que são contra-mão no caminho. Fique ligada.</li>
                 </ul>
+                <p>Legenda:</p>
+                <ul>
+                    <li class="bike">Trajeto de bike (sarada)</li>
+                    <li class="jrpass">JRPass (diva)</li>
+                    <li class="no-jrpass">Um dos transportes não será via JRPass (ryca)</li>
+                    <li class="to-be-computed">Será analisado</li>
+                </ul>
             </div>
         </div>
         <div class="row">
@@ -42,7 +65,10 @@
                         <span>06/04 - Akihabara</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/XJAFVfTtGcQ2" target="_blank">Avenida principal</a>
+                                <a class="bike" href="https://goo.gl/maps/nJYko1RKrfs" target="_blank">Avenida principal</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/7mPqCvy36SP2" target="_blank">Avenida principal x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -50,13 +76,16 @@
                         <span>07/04 - Harajuku</span>
                         <ul>
                             <li>
-                                <a href="https://www.google.com.br/maps/dir/108-0072,+Japan/Omotesando,+6+Chome-4+Jing%C5%ABmae,+Shibuya-ku,+T%C5%8Dky%C5%8D-to+150-0001,+Japan/@35.656355,139.6995078,14z/am=t/data=!4m14!4m13!1m5!1m1!1s0x60188b0ef78753f3:0x28181b76ad6671e7!2m2!1d139.7281611!2d35.6443746!1m5!1m1!1s0x60188ca461c13767:0xbddfc93882ef14a0!2m2!1d139.7054!2d35.66845!3e2?hl=en" target="_blank">Omotesando</a>
+                                <a class="bike" href="https://goo.gl/maps/AzZKHX6kkt22" target="_blank">Omotesando</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/LzHa4VS9nzw" target="_blank">Omotesando x Takeshita-Dori</a>
+                                <a class="bike" href="https://goo.gl/maps/LzHa4VS9nzw" target="_blank">Omotesando x Takeshita-Dori</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/mPWvQcnmP7G2" target="_blank">Takeshita-Dori x Meiji Jingu (templo)</a>
+                                <a class="bike" href="https://goo.gl/maps/mPWvQcnmP7G2" target="_blank">Takeshita-Dori x Meiji Jingu (templo)</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/khPUoj94aNF2" target="_blank">Meiji Jingu x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -64,10 +93,19 @@
                         <span>08/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/1gFCaFwvNe22" target="_blank">Kaminari-mon Gate</a>
+                                <a class="bike" href="https://goo.gl/maps/DdJRaebPesp" target="_blank">Kaminari-mon Gate</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/8SZtfV1FryJ2" target="_blank">Kaminari-mon Gate x Nakamise-dori</a>
+                                <a class="bike" href="https://goo.gl/maps/8SZtfV1FryJ2" target="_blank">Kaminari-mon Gate x Nakamise-dori</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/Nj2ak4othuN2" target="_blank">Nakamise-dori x Homestay</a>
+                            </li>
+                            <li>
+                                <a class="no-jrpass" href="https://goo.gl/maps/6nwGg16ALUq" target="_blank">Homestay x Show BTOB (portões abrem às 16h, show às 17h)</a>
+                            </li>
+                            <li>
+                                <a class="no-jrpass" href="https://goo.gl/maps/jfuntr7kdCP2" target="_blank">Show BTOB x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -75,7 +113,7 @@
                         <span>09/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/GZkhKMaeMoy" target="_blank">Great Buda of Kamakura w/ Takayama San</a>
+                                <a class="bike" href="https://goo.gl/maps/GZkhKMaeMoy" target="_blank">Great Buda of Kamakura w/ Takayama San</a>
                             </li>
                         </ul>
                     </li>
@@ -83,19 +121,19 @@
                         <span>10/04 - Yokohama</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/BP2ckVHXgwM2" target="_blank">Ramen Museum</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/sYuSGYxzDnM2" target="_blank">Ramen Museum</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/uraEmf3F9rs" target="_blank">Ramen Museum x Landmark Tower</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/uraEmf3F9rs" target="_blank">Ramen Museum x Landmark Tower</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/w7QCpNFd2DP2" target="_blank">Landmark Tower x Yokohama Chinatown</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/w7QCpNFd2DP2" target="_blank">Landmark Tower x Yokohama Chinatown</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/yJQCErjxW7A2" target="_blank">Yokohama Chinatown x Sankeien Garden</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/yJQCErjxW7A2" target="_blank">Yokohama Chinatown x Sankeien Garden</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/DkGic6iCLk52" target="_blank">Sankeien Garden x Homestay</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/hSXcvSekZhz" target="_blank">Sankeien Garden x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -103,10 +141,13 @@
                         <span>11/04 - Shibuya</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/oVtQpa6t2JK2" target="_blank">Hachiko statue</a>
+                                <a class="bike" href="https://goo.gl/maps/HDWZaJoepm22" target="_blank">Hachiko statue</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/eXNQ1StHNa72" target="_blank">Hachiko Statue x Shinjuku</a>
+                                <a class="bike" href="https://goo.gl/maps/eXNQ1StHNa72" target="_blank">Hachiko Statue x Shinjuku</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/dxN6fx7j4dk" target="_blank">Shinjuku x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -114,7 +155,10 @@
                         <span>12/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/9bx44nT1huj" target="_blank">Chidori-ga-fuchi</a>
+                                <a class="bike" href="https://goo.gl/maps/Q4g3cxzgpw32" target="_blank">Chidori-ga-fuchi</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/tmAouBnk2TJ2" target="_blank">Chidori-ga-fuchi x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -122,10 +166,13 @@
                         <span>13/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/cCiKw8cjQ6N2" target="_blank">Roppongi Hills</a>
+                                <a class="bike" href="https://goo.gl/maps/EhrbJbb5Thn" target="_blank">Roppongi Hills</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/WFh2JQ8ZWuj" target="_blank">Arisugawa Park</a>
+                                <a class="bike" href="https://goo.gl/maps/WFh2JQ8ZWuj" target="_blank">Roppongi Hills x Arisugawa Park</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/Hvbdn7AqteQ2" target="_blank">Arisugawa Park x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -133,7 +180,10 @@
                         <span>14/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/TVpi6NQcZBL2" target="_blank">Tsukiji market às 3am e Outside market às 9am</a>
+                                <a class="bike" href="https://goo.gl/maps/c3M5cstRnAs" target="_blank">Tsukiji market às 3am e Outside market às 9am</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/fWUgh62Fkr72" target="_blank">Outside market x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -141,7 +191,10 @@
                         <span>15/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/QSMM1PMdJt92" target="_blank">Ueno Park</a>
+                                <a class="bike" href="https://goo.gl/maps/BrAMQdkvt6Q2" target="_blank">Ueno Park</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/sHfyon6n1Q52" target="_blank">Ueno Park x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -149,19 +202,16 @@
                         <span>16/04 - Ginza</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/Jnsv3kJMJuk" target="_blank">Kabuki-za Theatre</a>
+                                <a class="bike" href="https://goo.gl/maps/d6aenRif3W42" target="_blank">Kabuki-za Theatre</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/jvP3SHDDyvt" target="_blank">Kabuki-za Theatre x Ginza Itoya</a>
+                                <a class="bike" href="https://goo.gl/maps/jvP3SHDDyvt" target="_blank">Kabuki-za Theatre x Ginza Itoya</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/gUssUVunyXE2" target="_blank">Ginza Itoya x De Beers Building</a>
+                                <a class="bike" href="https://goo.gl/maps/gUssUVunyXE2" target="_blank">Ginza Itoya x De Beers Building</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/Am3QCQs2Wim" target="_blank">De Beers Building x Tokyo Sky Tree</a>
-                            </li>
-                            <li>
-                                <a href="https://goo.gl/maps/k3UZBzAwQXk" target="_blank">Tokyo Sky Tree x Homestay</a>
+                                <a class="bike" href="https://goo.gl/maps/tGLC9RMicCL2" target="_blank">De Beers Building x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -169,16 +219,25 @@
                         <span>17/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/ibjgygspobz" target="_blank">Sensō-ji Temple</a>
+                                <a class="bike" href="https://goo.gl/maps/invofmAFJ3t" target="_blank">Sensō-ji Temple</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/1K3uqzQRMqz" target="_blank">Sensō-ji Temple x Sumida Koen Park</a>
+                                <a class="bike" href="https://goo.gl/maps/1K3uqzQRMqz" target="_blank">Sensō-ji Temple x Sumida Koen Park</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/H31toUL2faE2" target="_blank">Sumida Koen Park x Tokyo Skytree</a>
+                            </li>
+                            <li>
+                                <a class="bike" href="https://goo.gl/maps/9DLZoyNfYaL2" target="_blank">Tokyo Skytree x Homestay</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <span>18/04 - BDay!!! <3</span>
                         <ul>
+                            <li>
+                                <a class="bike" href="javascript:void(0);">O que sobrar do dia 10/04 + Nippon Maru (que não abre na segunda)</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -195,7 +254,10 @@
                         <span>21/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/mTVCvzRM3BQ2" target="_blank">Castelo de Nagoya</a>
+                                <a class="to-be-computed" href="https://goo.gl/maps/mTVCvzRM3BQ2" target="_blank">Castelo de Nagoya</a>
+                            </li>
+                            <li>
+                                <a class="to-be-computed" href="https://goo.gl/maps/LpjtZX8fMix" target="_blank">Castelo de Nagoya x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -203,13 +265,13 @@
                         <span>22/04 - Kyoto</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/8ibezdiNig12" target="_blank">Santuário Fushimi Inari</a>
+                                <a class="jrpass" href="https://goo.gl/maps/8ibezdiNig12" target="_blank">Santuário Fushimi Inari</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/rQByoybQXqG2" target="_blank">Santuário Fushimi Inari x Kinkaku-Ji</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/9Hk3u6GdYMC2" target="_blank">Santuário Fushimi Inari x Kinkaku-Ji</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/ogemjF3aW6K2" target="_blank">Kinkaku-Ji x Homestay</a>
+                                <a class="jrpass" href="https://goo.gl/maps/ogemjF3aW6K2" target="_blank">Kinkaku-Ji x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -217,13 +279,13 @@
                         <span>23/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/vn5KBDHdrW52" target="_blank">Dotonbori</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/vn5KBDHdrW52" target="_blank">Dotonbori</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/HBi2rs2KVx22" target="_blank">Dotonbori x Castelo de Osaka</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/cayTHjMbN6w" target="_blank">Dotonbori x Castelo de Osaka</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/ZTpEVXULDWs" target="_blank">Castelo de Osaka x Homestay</a>
+                                <a class="jrpass" href="https://goo.gl/maps/sKw7FdmWX4P2" target="_blank">Castelo de Osaka x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -231,7 +293,10 @@
                         <span>24/04 - Hyogo</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/FDkLK5L3eJ32" target="_blank">Himeji Castle</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/FDkLK5L3eJ32" target="_blank">Himeji Castle</a>
+                            </li>
+                            <li>
+                                <a class="no-jrpass" href="https://goo.gl/maps/DseQVLoVGho" target="_blank">Himeji Castle x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -239,10 +304,10 @@
                         <span>25/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/ZT2UjHBr3Z72" target="_blank">Hiroshima Atomic Bomb Museum</a>
+                                <a class="to-be-computed" href="https://goo.gl/maps/ZT2UjHBr3Z72" target="_blank">Hiroshima Atomic Bomb Museum</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/9cxMCZyztgJ2" target="_blank">Hiroshima Atomic Bomb Museum x Homestay</a>
+                                <a class="to-be-computed" href="https://goo.gl/maps/9cxMCZyztgJ2" target="_blank">Hiroshima Atomic Bomb Museum x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -250,7 +315,7 @@
                         <span>26/04</span>
                         <ul>
                             <li>
-                                <a href="#" target="_blank">Hiroshima Miyajima</a>
+                                <a class="to-be-computed" href="javascript:void(0);">Hiroshima Miyajima</a>
                             </li>
                         </ul>
                     </li>
@@ -258,19 +323,19 @@
                         <span>27/04</span>
                         <ul>
                             <li>
-                                <a href="#" target="_blank">HiroshimaHyogo Daibutsu</a>
+                                <a class="to-be-computed" href="javascript:void(0);">HiroshimaHyogo Daibutsu</a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">HiroshimaHyogo Daibutsu x Kitano</a>
+                                <a class="to-be-computed" href="javascript:void(0);">HiroshimaHyogo Daibutsu x Kitano</a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">Kitano x Porto de Kobe</a>
+                                <a class="to-be-computed" href="javascript:void(0);">Kitano x Porto de Kobe</a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">Porto de Kobe x UCC Coffee Museum</a>
+                                <a class="to-be-computed" href="javascript:void(0);">Porto de Kobe x UCC Coffee Museum</a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">UCC Coffee Museum x Homestay</a>
+                                <a class="to-be-computed" href="javascript:void(0);">UCC Coffee Museum x Homestay</a>
                             </li>
                         </ul>
                     </li>
@@ -278,7 +343,7 @@
                         <span>28/04</span>
                         <ul>
                             <li>
-                                <a href="#" target="_blank">Nara</a>
+                                <a class="to-be-computed" href="javascript:void(0);">Nara</a>
                             </li>
                         </ul>
                     </li>
@@ -286,13 +351,13 @@
                         <span>29/04</span>
                         <ul>
                             <li>
-                                <a href="https://goo.gl/maps/Y5rBYLBXD8R2" target="_blank">Kimono Tea house</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/Y5rBYLBXD8R2" target="_blank">Kimono Tea house</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/zZMX94wTWvp" target="_blank">Kimono Tea house x Kema Sakuranomiya Park</a>
+                                <a class="no-jrpass" href="https://goo.gl/maps/Vd4aENnn5Gx" target="_blank">Kimono Tea house x Kema Sakuranomiya Park</a>
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/5RYFN57xMyA2" target="_blank">Kema Sakuranomiya Park x Homestay</a>
+                                <a class="jrpass" href="https://goo.gl/maps/yHzR8anBMtD2" target="_blank">Kema Sakuranomiya Park x Homestay</a>
                             </li>
                         </ul>
                     </li>
